@@ -1,0 +1,16 @@
+{
+  "naming": {
+    "pattern": "^[a-z0-9]+(-[a-z0-9]+)*_v\\d+\\.\\d+\\.\\d+$",
+    "max_length": 60,
+    "forbidden_chars": ["@", "#", " ", "!"]
+  },
+  "metadata": {
+    "required_fields": ["name", "version", "author", "description", "created_at", "tags"],
+    "version_format": "^\\d+\\.\\d+\\.\\d+$"
+  },
+  "structure": {
+    "required_files": ["README.md", "manifest.json"],
+    "max_size_mb": 50,
+    "allowed_extensions": [".json", ".yaml", ".md", ".py", ".txt"]
+  }
+}
