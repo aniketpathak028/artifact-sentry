@@ -1,0 +1,23 @@
+
+services:
+  validator:
+    build:
+      context: .
+      dockerfile: validator/Dockerfile
+    container_name: artifact-validator
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./config:/app/config
+      - ./reports:/app/reports
+      - ./sample-artifact:/app/sample-artifact
+    restart: unless-stopped
+
+  n8n:
+    image: n8nio/n8n
+    container_name: n8n
+    ports:
+      - "5678:5678"
+    volumes:
+      - ~/.n8n:/home/node/.n8n
+    restart: unless-stopped
