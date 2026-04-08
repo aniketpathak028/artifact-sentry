@@ -1,4 +1,4 @@
-# ArtifactSentry
+# artifact-sentry
 
 > **Artifact Quality Validator** — catch issues before they reach review.
 
